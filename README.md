@@ -1,7 +1,6 @@
 
-# ros2-images
 
-## Purpose
+# ros2-images
 This Docker image provides a consistent ROS 2 (Humble) environment with pre-installed dependencies. It allows team members to develop and run ROS 2 applications in a reproducible environment without setting up ROS locally.
 
 ## Requirements
