@@ -1,5 +1,3 @@
-
-
 # ros2-images
 This Docker image provides a consistent ROS 2 (Humble) environment with pre-installed dependencies. It allows team members to develop and run ROS 2 applications in a reproducible environment without setting up ROS locally.
 
@@ -39,6 +37,3 @@ This Docker image provides a consistent ROS 2 (Humble) environment with pre-inst
   ```
 
 - **Exit the Container**: Simply type `exit` or press `Ctrl+D`.
-
-## Purpose Recap
-This image provides a standard development environment to ensure consistency across team members. Develop locally, run inside the container—fast iteration without ROS installation complexity.
