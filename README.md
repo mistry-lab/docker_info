@@ -27,7 +27,7 @@ The Docker image can be found [here](https://github.com/mistry-lab/docker_info/p
 - **Docker Image**:
   - Pull the Docker image:
     ```bash
-    docker pull ghcr.io/mistry-lab/ros2-images:latest
+    docker pull ghcr.io/mistry-lab/ros2-images:franka
     ```
 
 ## Running the Docker Container with NVIDIA GPU
@@ -35,7 +35,7 @@ The Docker image can be found [here](https://github.com/mistry-lab/docker_info/p
 If you have an NVIDIA GPU, you can run the container with GPU support for better performance in visualization tools like RViz:
 
 ```bash
-docker run -it --gpus all --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --volume="/tmp/.X11-unix:/tmp/.X11-unix" --net=host ghcr.io/mistry-lab/ros2-images:latest
+docker run -it --gpus all --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" --volume="/tmp/.X11-unix:/tmp/.X11-unix" --net=host ghcr.io/mistry-lab/ros2-images:franka
 ```
 
 - **`--gpus all`**: Enables GPU access for the container.
@@ -56,7 +56,7 @@ docker run -it --network host \
 If you prefer running RViz locally, you can:
 1. **Run the container without GPU**:
     ```bash
-    docker run -it --network host ghcr.io/mistry-lab/ros2-images:latest
+    docker run -it --network host ghcr.io/mistry-lab/ros2-images:frnaka
     ```
 
 2. **Run RViz on your local machine**:
@@ -65,7 +65,7 @@ If you prefer running RViz locally, you can:
     rviz2
     ```
 
-## Using the Franka Emika FR3 Robot (with Fake Hardware) inside container
+## Using the Franka Emika FR3 Robot (with Fake Hardware) inside the container
 
 You can test the FR3 robot setup with fake hardware for simulation.
 
@@ -88,7 +88,7 @@ You can test the FR3 robot setup with fake hardware for simulation.
 2. **Run the Docker Container**:
    Mount your local code into the container:
    ```bash
-   docker run -it -v $(pwd):/root/my_code ghcr.io/mistry-lab/ros2-images:latest
+   docker run -it -v $(pwd):/root/my_code ghcr.io/mistry-lab/ros2-images:frnaka
    ```
 
    - Your local directory `$(pwd)` will be mounted to `/root/my_code` in the container.
