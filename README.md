@@ -53,7 +53,7 @@ docker run -it --network host \
 
 ## Running RViz Locally
 
-If you don’t have GPU support or prefer running RViz locally, you can:
+If you prefer running RViz locally, you can:
 1. **Run the container without GPU**:
     ```bash
     docker run -it --network host ghcr.io/mistry-lab/ros2-images:latest
@@ -65,21 +65,17 @@ If you don’t have GPU support or prefer running RViz locally, you can:
     rviz2
     ```
 
-## Using the Franka Emika FR3 Robot (with Fake Hardware)
+## Using the Franka Emika FR3 Robot (with Fake Hardware) inside container
 
-You can test the FR3 robot setup with fake hardware for planning and control simulation.
+You can test the FR3 robot setup with fake hardware for simulation.
 
-1. **Run the container**:
+1. **Launch the MoveIt configuration with fake hardware**:
     ```bash
-    docker run -it --gpus all --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw"     --volume="/tmp/.X11-unix:/tmp/.X11-unix" --net=host ghcr.io/mistry-lab/ros2-images:latest
-    ```
-
-2. **Launch the MoveIt configuration with fake hardware**:
-    ```bash
+    source /root/franka_ros2_ws/install/setup.bash
     ros2 launch franka_fr3_moveit_config moveit.launch.py robot_ip:=dont-care use_fake_hardware:=true
     ```
 
-3. **Visualize and control the FR3 robot** using MoveIt and RViz.
+2. **Visualize and control the FR3 robot** using MoveIt and RViz.
 
 ## Developing with the Docker Image
 
