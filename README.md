@@ -3,7 +3,7 @@
 
 This Docker image provides a consistent ROS 2 (Humble) environment with pre-installed dependencies for developing and running ROS 2 applications, including the Franka Emika FR3 robot. It supports NVIDIA GPU acceleration for better performance with visualization tools like RViz.
 
-The Docker image can be found [here](https://github.com/mistry-lab/docker_info/pkgs/container/ros2-images).
+The Docker image can be found [here](https://github.com/mistry-lab/docker_info/pkgs/container/ros2-images) (tagged franka).
 
 ## Requirements
 
